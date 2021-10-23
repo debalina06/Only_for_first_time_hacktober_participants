@@ -5,7 +5,7 @@
 }
 
 body {
-  background-color: #ecf0f1;
+  background-color: #f8f9fd;
   font-family: 'Roboto', sans-serif;
   display: flex;
   align-items: center;
@@ -15,92 +15,80 @@ body {
   margin: 0;
 }
 
-img {
-  max-width: 100%;
-}
-
-.card {
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-  border-radius: 10px;
+.container {
+  border-radius: 5px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
   overflow: hidden;
-  width: 350px;
+  width: 300px;
 }
 
-.card-header {
-  height: 200px;
-}
-
-.card-header img {
-  object-fit: cover;
-  height: 100%;
-  width: 100%;
-}
-
-.card-content {
-  background-color: #fff;
-  padding: 30px;
-}
-
-.card-title {
-  height: 20px;
+.title {
   margin: 0;
 }
 
-.card-excerpt {
-  color: #777;
-  margin: 10px 0 20px;
-}
-
-.author {
-  display: flex;
-}
-
-.profile-img {
-  border-radius: 50%;
-  overflow: hidden;
-  height: 40px;
-  width: 40px;
-}
-
-.author-info {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  margin-left: 10px;
-  width: 100px;
-}
-
-.author-info small {
-  color: #aaa;
-  margin-top: 5px;
-}
-
-.animated-bg {
-  background-image: linear-gradient(
-    to right,
-    #f6f7f8 0%,
-    #edeef1 10%,
-    #f6f7f8 20%,
-    #f6f7f8 100%
-  );
-  background-size: 200% 100%;
-  animation: bgPos 1s linear infinite;
-}
-
-.animated-bg-text {
-  border-radius: 50px;
+.subtitle {
   display: inline-block;
-  margin: 0;
-  height: 10px;
+  margin: 5px 0 20px;
+  opacity: 0.8;
+}
+
+.header {
+  background-color: #3e57db;
+  color: #fff;
+  padding: 30px 20px;
+}
+
+.header input {
+  background-color: rgba(0, 0, 0, 0.3);
+  border: 0;
+  border-radius: 50px;
+  color: #fff;
+  font-size: 14px;
+  padding: 10px 15px;
   width: 100%;
 }
 
-@keyframes bgPos {
-  0% {
-    background-position: 50% 0;
-  }
+.header input:focus {
+  outline: none;
+}
 
-  100% {
-    background-position: -150% 0;
-  }
+.user-list {
+  background-color: #fff;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.user-list li {
+  display: flex;
+  padding: 20px;
+}
+
+.user-list img {
+  border-radius: 50%;
+  object-fit: cover;
+  height: 50px;
+  width: 50px;
+}
+
+.user-list .user-info {
+  margin-left: 10px;
+}
+
+.user-list .user-info h4 {
+  margin: 0 0 10px;
+}
+
+.user-list .user-info p {
+  font-size: 12px;
+}
+
+.user-list li:not(:last-of-type) {
+  border-bottom: 1px solid #eee;
+}
+
+.user-list li.hide {
+  display: none;
 }
